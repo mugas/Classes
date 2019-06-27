@@ -1,0 +1,38 @@
+body,
+html {
+  background: white;
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "No-transition linear ease-in ease-out ease-in-out";
+  height: 100%;
+}
+
+.No-transition {
+  grid-area: No-transition;
+  background-color: blueviolet;
+}
+
+.linear {
+  grid-area: linear;
+  background-color: red;
+}
+
+.ease-in {
+  grid-area: ease-in;
+  background-color: green;
+}
+
+.ease-out {
+  grid-area: ease-out;
+  background-color: blue;
+}
+
+.ease-in-out {
+  grid-area: ease-in-out;
+  background-color: yellow;
+}

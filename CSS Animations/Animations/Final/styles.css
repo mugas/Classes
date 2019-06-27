@@ -19,10 +19,17 @@ body {
   height: 200px;
 
   background-color: green;
-  border-radius: 50%;
+
   box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
-  animation: animate 5s linear infinite;
-  transition: all 2.5s;
+  animation: animate 5s infinite;
+  transition: all 5s ease-in;
+  /* border-radius: 50%; */
+}
+
+.sphere:hover {
+  width: 100px;
+  height: 200px;
+  animation-play-state: paused;
 }
 
 .linear {
@@ -33,9 +40,9 @@ body {
   display: block;
   width: 200px;
   height: 200px;
-
+  /* border-radius: 50%; */
   background-color: green;
-  border-radius: 50%;
+
   box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
   animation: animate 5s linear infinite;
   transition: all 5s linear;
@@ -50,11 +57,11 @@ body {
   display: block;
   width: 200px;
   height: 200px;
-
+  /* border-radius: 50%; */
   background-color: green;
-  border-radius: 50%;
+
   box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
-  animation: animate 5s linear infinite;
+  animation: animate 5s ease-in infinite;
   transition: all 7.5s ease-in;
   animation-delay: 5s;
 }
@@ -67,12 +74,11 @@ body {
   display: block;
   width: 200px;
   height: 200px;
-  /* margin: 30px auto 0; */
   background-color: green;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
-  animation: animate 5s linear infinite;
-  transition: all 9s ease-out;
+  animation: animate 5s ease-out infinite;
+  transition: all 10s ease-out;
   animation-delay: 7.5s;
 }
 
@@ -84,11 +90,10 @@ body {
   display: block;
   width: 200px;
   height: 200px;
-  margin: 30px auto 0;
+  /* border-radius: 50%; */
   background-color: #21f005;
-  border-radius: 50%;
   box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
-  animation: animate 5s linear infinite;
+  animation: animate 5s ease-in-out infinite;
   transition: all 12.5s ease-in-out;
   animation-delay: 10s;
 }
@@ -98,8 +103,10 @@ body {
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(150%);
+    transform: translateY(100%);
     background: #f02e05;
+
+    border-radius: 50%;
   }
   100% {
     transform: translateY(0%);
