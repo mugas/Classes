@@ -1,0 +1,105 @@
+html,
+body,
+.grid-container {
+  height: 100%;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "first" "second" "third";
+}
+
+body {
+  background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  transition: all 0.1s linear;
+}
+
+.title {
+  display: none;
+}
+
+.first h1 {
+  display: block;
+  text-align: center;
+  animation-name: slideIn;
+  animation-duration: 3s;
+  font-size: 48px;
+}
+
+.second h2 {
+  animation-name: passing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  font-size: 5em;
+}
+
+.just {
+  color: rgb(233, 12, 12);
+}
+
+.passing {
+  color: rgb(207, 116, 12);
+}
+
+.by {
+  color: rgb(124, 224, 10);
+}
+
+p {
+  font-size: 7em;
+  text-align: center;
+  color: white;
+}
+
+p:hover {
+  animation: lightUp 1.5s ease-in-out infinite alternate;
+  cursor: pointer;
+  color:red;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  80% {
+    transform: translatey(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes passing {
+  from {
+    margin-right: 50%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 50%;
+    width: 100%;
+  }
+}
+
+@keyframes lightUp {
+  from {
+    text-shadow: 0 0 10px rgb(233, 12, 12), 0 0 20px rgb(207, 116, 12),
+      0 0 30px rgb(124, 224, 10), 0 0 40px #ff1177;
+  }
+
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2277;
+  }
+}

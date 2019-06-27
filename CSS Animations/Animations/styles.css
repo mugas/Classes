@@ -1,0 +1,108 @@
+body {
+  background: #0f0f0f;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "No-transition linear ease-in ease-out ease-in-out";
+}
+
+.No-transition {
+  grid-area: No-transition;
+}
+
+.sphere {
+  display: block;
+  width: 200px;
+  height: 200px;
+
+  background-color: green;
+  border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  animation: animate 5s linear infinite;
+  transition: all 2.5s;
+}
+
+.linear {
+  grid-area: linear;
+}
+
+.sphere-2 {
+  display: block;
+  width: 200px;
+  height: 200px;
+
+  background-color: green;
+  border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  animation: animate 5s linear infinite;
+  transition: all 5s linear;
+  animation-delay: 2.5s;
+}
+
+.ease-in {
+  grid-area: ease-in;
+}
+
+.sphere-3 {
+  display: block;
+  width: 200px;
+  height: 200px;
+
+  background-color: green;
+  border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  animation: animate 5s linear infinite;
+  transition: all 7.5s ease-in;
+  animation-delay: 5s;
+}
+
+.ease-out {
+  grid-area: ease-out;
+}
+
+.sphere-4 {
+  display: block;
+  width: 200px;
+  height: 200px;
+  /* margin: 30px auto 0; */
+  background-color: green;
+  border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  animation: animate 5s linear infinite;
+  transition: all 9s ease-out;
+  animation-delay: 7.5s;
+}
+
+.ease-in-out {
+  grid-area: ease-in-out;
+}
+
+.sphere-5 {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 30px auto 0;
+  background-color: #21f005;
+  border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  animation: animate 5s linear infinite;
+  transition: all 12.5s ease-in-out;
+  animation-delay: 10s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(150%);
+    background: #f02e05;
+  }
+  100% {
+    transform: translateY(0%);
+    background: #e9f005;
+  }
+}

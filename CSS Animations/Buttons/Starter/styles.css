@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "first second third fourth";
+}
+
+.first {
+  display: grid;
+  grid-area: first;
+  width: 100%;
+  background: red;
+}
+
+.second {
+  display: grid;
+  grid-area: second;
+  width: 100%;
+  background: green;
+}
+
+.third {
+  display: grid;
+  grid-area: third;
+  width: 100%;
+  background: yellow;
+}
+
+.fourth {
+  display: grid;
+  grid-area: fourth;
+  width: 100%;
+  background: blue;
+}

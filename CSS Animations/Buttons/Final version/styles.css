@@ -1,0 +1,142 @@
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "first second third fourth";
+}
+
+html,
+body,
+.grid-container {
+  height: 100%;
+  margin: 0;
+}
+
+.first {
+  display: grid;
+  grid-area: first;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.second {
+  display: grid;
+  grid-area: second;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.third {
+  display: grid;
+  grid-area: third;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourth {
+  display: grid;
+  grid-area: fourth;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  align-items: center;
+  align-self: center;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  box-shadow: 0px 8px 10px 0px rgba(151, 8, 8, 0.3);
+}
+
+.first:hover {
+  background: linear-gradient(to right, #c32b12, #df8b16);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 3s ease infinite;
+  -moz-animation: Gradient 3s ease infinite;
+  animation: Gradient 3s ease infinite;
+  transition: all 0.1s linear;
+}
+
+.second:hover {
+  background: linear-gradient(to right, #df8b16, #ccf00a);
+  background-size: 400% 400%;
+
+  -webkit-animation: Gradient 3s ease infinite;
+  -moz-animation: Gradient 3s ease infinite;
+  animation: Gradient 3s ease infinite;
+  transition: background 0.1s linear;
+}
+
+.third:hover {
+  background: linear-gradient(to right, #ccf00a, #34f00a);
+  background-size: 400% 400%;
+
+  -webkit-animation: Gradient 3s ease infinite;
+  -moz-animation: Gradient 3s ease infinite;
+  animation: Gradient 3s ease infinite;
+  transition: all 0.1s linear;
+}
+
+.fourth:hover {
+  background: linear-gradient(to right, #34f00a, #c32b12);
+  background-size: 400% 400%;
+
+  -webkit-animation: Gradient 3s ease infinite;
+  -moz-animation: Gradient 3s ease infinite;
+  animation: Gradient 3s ease infinite;
+  transition: all 0.1s linear;
+}
+
+.first-button:hover::after {
+  content: "❤";
+  color: red;
+  text-shadow: 0px 0px 6px #f94e66;
+  font-size: 100%;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.second-button {
+  background: red;
+  color: black;
+  transition: background-color 0.1s ease;
+}
+
+.second-button:hover {
+  background: green;
+  cursor: pointer;
+}
+
+#span {
+  display: none;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.third-button:hover #span {
+  display: block;
+}
+
+.fourth-button:hover {
+  background: url("https://images.unsplash.com/photo-1517920366573-9d35a519b7c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+    no-repeat center center;
+  height: 150px;
+  width: 150px;
+}
