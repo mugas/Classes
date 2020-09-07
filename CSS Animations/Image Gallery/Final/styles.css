@@ -9,14 +9,14 @@ body {
   grid-template-areas: "image-1 image-2 image-3 image-4";
   grid-gap: 10px;
 }
-/* 
-  .grid-container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: red;
-  } */
+
+.grid-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: red;
+}
 
 .grid-container > div > img {
   width: 100%;

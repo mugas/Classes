@@ -74,8 +74,8 @@ body {
 }
 
 .sphere-5 {
-  animation: transitions 5s ease-in-out infinite;
-  transition: all 12.5s ease-in-out;
+  animation: transitions 5s ease-in;
+  transition: all 12.5s ease-in;
   animation-delay: 10s;
 }
 
@@ -86,7 +86,6 @@ body {
   50% {
     transform: translateY(50vh);
     background: #f02e05;
-
     border-radius: 50%;
   }
   100% {

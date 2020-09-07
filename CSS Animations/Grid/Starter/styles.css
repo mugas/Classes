@@ -1,0 +1,33 @@
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "image-1 image-2 image-3 image-4";
+  grid-gap: 10px;
+}
+
+.image-1 {
+  grid-area: image-1;
+  background-color: red;
+}
+
+.image-2 {
+  grid-area: image-2;
+  background-color: green;
+}
+
+.image-3 {
+  grid-area: image-3;
+  background-color: blue;
+}
+
+.image-4 {
+  grid-area: image-4;
+  background-color: violet;
+}
